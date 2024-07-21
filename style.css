@@ -1,1 +1,38 @@
 
+body{
+    user-select: none;
+    align-content: center;
+    overflow: hidden;
+}
+
+#main{
+    background-color: #fa2;
+    width:100%;
+    height:500px;
+}
+
+.colorM{
+    background:#000;
+}
+
+.form1{
+    transform: translate(50px,50px);
+}
+.form2{
+    transform: translate(80px,20px);
+}
+.form3{
+    transform: translate(50px,-20px);
+}
+.form4{
+    transform: translate(110px,-85px);
+}
+
+.h{
+    width:100px;
+    height: 5px;
+}
+.v{
+    width:5px;
+    height: 100px;
+}

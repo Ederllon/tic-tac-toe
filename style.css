@@ -51,6 +51,12 @@ position:absolute;
 #p1{
 background-color: rgba(0,0,200,0.5);
 transform: translate(50px,-190px);
-
-
 }
+#p2{
+    background-color: rgba(0,0,200,0.5);
+    transform: translate(80px,-190px);
+    }
+    #p3{
+        background-color: rgba(0,0,200,0.5);
+        transform: translate(110px,-190px);
+        }

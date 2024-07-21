@@ -1,4 +1,3 @@
-
 body{
     user-select: none;
     align-content: center;
@@ -9,6 +8,7 @@ body{
     background-color: #fa2;
     width:100%;
     height:500px;
+
 }
 
 .colorM{
@@ -35,4 +35,12 @@ body{
 .v{
     width:5px;
     height: 100px;
+}
+
+#local{
+position:absolute;
+
+}
+.fixed{
+    position:fixed;
 }

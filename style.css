@@ -43,4 +43,14 @@ position:absolute;
 }
 .fixed{
     position:fixed;
+    width: 30px;
+    height: 30px;
+
+}
+
+#p1{
+background-color: rgba(0,0,200,0.5);
+transform: translate(50px,-190px);
+
+
 }

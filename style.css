@@ -84,11 +84,12 @@ transform: translate(50px,-190px);
                                 background-color: rgba(0,0,200,0.5);
                                 transform: translate(110px,-120px);
                                 }
-                                
+
                                 .default_clicker{
                                     font-family: "Roboto", sans-serif;
                                     font-weight: 500;
                                     font-size:40px;
                                     z-index: 10;
                                     position: fixed;
+                                    transform:translate(5px, -38px);
                                 }

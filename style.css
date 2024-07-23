@@ -60,3 +60,27 @@ transform: translate(50px,-190px);
         background-color: rgba(0,0,200,0.5);
         transform: translate(110px,-190px);
         }
+        #p4{
+            background-color: rgba(0,0,200,0.5);
+            transform: translate(50px,-155px);
+            }
+            #p5{
+                background-color: rgba(0,0,200,0.5);
+                transform: translate(80px,-155px);
+                }
+                #p6{
+                    background-color: rgba(0,0,200,0.5);
+                    transform: translate(110px,-155px);
+                    }
+                    #p7{
+                        background-color: rgba(0,0,200,0.5);
+                        transform: translate(50px,-120px);
+                        }
+                        #p8{
+                            background-color: rgba(0,0,200,0.5);
+                            transform: translate(80px,-120px);
+                            }
+                            #p9{
+                                background-color: rgba(0,0,200,0.5);
+                                transform: translate(110px,-120px);
+                                }

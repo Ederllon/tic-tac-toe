@@ -19,7 +19,7 @@
 <div class="colorM form3 h"></div>
 <div class="colorM form4 v"></div>
 <div id="local"> 
-<div class="fixed" id="p1"><h1 class="default_clicker " id="clicker1" data-value="a">x</h1></div>
+<div class="fixed" id="p1"><h1 class="default_clicker " id="clicker1" data-value="">x</h1></div>
 <div class="fixed" id="p2"><h1 class="default_clicker " id="clicker2">o</h1></div>
 <div class="fixed" id="p3"><h1 class="default_clicker " id="clicker3">x</h1></div>
 <div class="fixed" id="p4"><h1 class="default_clicker " id="clicker4">x</h1></div>
@@ -39,19 +39,29 @@ const p1_click = document.getElementById('p1');
 
 
 p1_click.addEventListener('click', func_hit);
+
 function func_hit(){
-    console.log('aaaa');
+      //if pra vez do jogador e sistemas...
+  
+  
+    //fazer if pra ver se data value esta vazio e sistemas
+  
+  
+  //adicionar innerhtml com o valor especifico na chamada, ex: funcao()
+  //add em todas as areas a func
+  
 };
+
+//if de wins e todas as formas de ganhar
 
 
 const pos1  = document.querySelector('#clicker1');
 
+
+//database da positions, ficar todos os get (testar os valores em funcao click pra ver se eles mudam de repente)
 const pos1_info = {
 'value': pos1.getAttribute('data-value') ,
 }
-
-
-console.log(pos1_info.value);
 
 </script>
 <script src="script.js">

@@ -104,8 +104,10 @@ transform: translate(50px,-190px);
   
 }
 .numberrs{
-  display: flex;
-  flex-flow: inline;
+    display:inline-flex;
+    margin-top:0px;
+    font-size:45px;
+  
   
   
 }

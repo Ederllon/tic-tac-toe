@@ -34,14 +34,25 @@
   <div class="table">Tabela: <h2 class="number1 numberrs"> 7</h2>x<h2 class="number2 numberrs">0</h2></div>
 </body>
 <script>
-
+var roundX = true;
 const p1_click = document.getElementById('p1');
 
 
 p1_click.addEventListener('click', func_hit);
 
 function func_hit(){
+  let value_roundX = null;
       //if pra vez do jogador e sistemas...
+    if( roundX === true){
+      value_roundX = 'x';
+        
+
+    }else{
+      value_roundX = 'o'
+    };
+      
+    
+
   
   
   

@@ -98,7 +98,7 @@ transform: translate(50px,-190px);
   margin:-500px 0 0 175px;
   position:fixed;
   font-size: 40px;
-  
+  border: solid 1px #eee;
    display: flex;
   flex-flow: inline;
   

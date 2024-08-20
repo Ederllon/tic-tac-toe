@@ -36,11 +36,28 @@
 <script>
 var roundX = true;
 const p1_click = document.getElementById('p1');
+const p2_click = document.getElementById('p2');
+const p3_click = document.getElementById('p3');
+const p4_click = document.getElementById('p4');
+const p5_click = document.getElementById('p5');
+const p6_click = document.getElementById('p6');
+const p7_click = document.getElementById('p7');
+const p8_click = document.getElementById('p8');
+const p9_click = document.getElementById('p9');
 
+p1_click.addEventListener('click', ()=>{func_hit( );})
+p1_click.addEventListener('click', ()=>{func_hit( );})
+p1_click.addEventListener('click', ()=>{func_hit( );})
+p1_click.addEventListener('click', ()=>{func_hit( );})
+p1_click.addEventListener('click', ()=>{func_hit( );})
+p1_click.addEventListener('click', ()=>{func_hit( );})
+p1_click.addEventListener('click', ()=>{func_hit( );})
+p1_click.addEventListener('click', ()=>{func_hit( );})
+p1_click.addEventListener('click', ()=>{func_hit( );})
 
-p1_click.addEventListener('click', func_hit);
 //add um parametro para adicionar no html em cada uma das areas
-function func_hit(){
+
+function func_hit(when){
   let value_roundX = null;
       //if pra vez do jogador e sistemas...
       // verificador de vez do round
@@ -52,13 +69,14 @@ function func_hit(){
       value_roundX = 'o'
     };
       
+
     //fazer if pra ver se data value esta vazio e sistemas
  
   
   
   //adicionar innerhtml com o valor especifico na chamada, ex: funcao()
   //add em todas as areas a func
-  
+  console.log(when);
 };
 
 //if de wins e todas as formas de ganhar

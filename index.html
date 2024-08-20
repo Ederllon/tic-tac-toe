@@ -19,15 +19,15 @@
 <div class="colorM form3 h"></div>
 <div class="colorM form4 v"></div>
 <div id="local"> 
-<div class="fixed" id="p1"><h1 class="default_clicker " id="clicker1" data-value="">x</h1></div>
-<div class="fixed" id="p2"><h1 class="default_clicker " id="clicker2">o</h1></div>
-<div class="fixed" id="p3"><h1 class="default_clicker " id="clicker3">x</h1></div>
-<div class="fixed" id="p4"><h1 class="default_clicker " id="clicker4">x</h1></div>
-<div class="fixed" id="p5"><h1 class="default_clicker " id="clicker5">x</h1></div>
-<div class="fixed" id="p6"><h1 class="default_clicker " id="clicker6">x</h1></div>
-<div class="fixed" id="p7"><h1 class="default_clicker " id="clicker7">x</h1></div>
-<div class="fixed" id="p8"><h1 class="default_clicker " id="clicker8">x</h1></div>
-<div class="fixed" id="p9"><h1 class="default_clicker " id="clicker9">x</h1></div>
+<div class="fixed" id="p1"><h1 class="default_clicker " id="clicker1" data-value=""></h1></div>
+<div class="fixed" id="p2"><h1 class="default_clicker " id="clicker2" data-value=""></h1></div>
+<div class="fixed" id="p3"><h1 class="default_clicker " id="clicker3" data-value=""></h1></div>
+<div class="fixed" id="p4"><h1 class="default_clicker " id="clicker4" data-value=""></h1></div>
+<div class="fixed" id="p5"><h1 class="default_clicker " id="clicker5" data-value=""></h1></div>
+<div class="fixed" id="p6"><h1 class="default_clicker " id="clicker6" data-value=""></h1></div>
+<div class="fixed" id="p7"><h1 class="default_clicker " id="clicker7" data-value=""></h1></div>
+<div class="fixed" id="p8"><h1 class="default_clicker " id="clicker8" data-value=""></h1></div>
+<div class="fixed" id="p9"><h1 class="default_clicker " id="clicker9" data-value=""></h1></div>
 
 </div>
 </div>
@@ -39,10 +39,11 @@ const p1_click = document.getElementById('p1');
 
 
 p1_click.addEventListener('click', func_hit);
-
+//add um parametro para adicionar no html em cada uma das areas
 function func_hit(){
   let value_roundX = null;
       //if pra vez do jogador e sistemas...
+      // verificador de vez do round
     if( roundX === true){
       value_roundX = 'x';
         
@@ -51,13 +52,8 @@ function func_hit(){
       value_roundX = 'o'
     };
       
-    
-
-  
-  
-  
-  
     //fazer if pra ver se data value esta vazio e sistemas
+ 
   
   
   //adicionar innerhtml com o valor especifico na chamada, ex: funcao()

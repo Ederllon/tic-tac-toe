@@ -44,8 +44,8 @@ const p6_click = document.getElementById('p6');
 const p7_click = document.getElementById('p7');
 const p8_click = document.getElementById('p8');
 const p9_click = document.getElementById('p9');
-
-p1_click.addEventListener('click', ()=>{func_hit(p1_click);})
+//continue
+p1_click.addEventListener('click', ()=>{func_hit(p1_click,pos1_info);})
 p2_click.addEventListener('click', ()=>{func_hit(p2_click);})
 p3_click.addEventListener('click', ()=>{func_hit(p3_click);})
 p4_click.addEventListener('click', ()=>{func_hit(p4_click);})
@@ -56,7 +56,7 @@ p8_click.addEventListener('click', ()=>{func_hit(p8_click);})
 p9_click.addEventListener('click', ()=>{func_hit(p9_click);})
 
 //add um parametro para adicionar no html em cada uma das area😀
-function func_hit(when){
+function func_hit(when,posClick){
   let value_roundX = null;
 
       //if pra vez do jogador e sistemas dcontinuação
@@ -75,13 +75,13 @@ function func_hit(when){
     
    
     //ação de oque fazer
-    console.log(pos1_info.value)
-    if(pos1_info.value == "" || pos1_info.value == null || pos1_info.value == undefined ){
-      pos1_info.value = "fazer quando tem nada";
+    console.log(posClick.value)
+    if(posClick.value == "" || posClick.value == null || posClick.value == undefined ){
+      posClick.value = "fazer quando tem nada";
       
     }
     else{
-      pos1_info.value = "fazer quando tem algo";   
+      posClick.value = "fazer quando tem algo";   
         
     
     }
@@ -107,9 +107,14 @@ let pos7  = document.querySelector('#clicker7');
 let pos8  = document.querySelector('#clicker8');
 let pos9  = document.querySelector('#clicker9');
 //database da positions, ficar todos os get (testar os valores em funcao click pra ver se eles mudam de repente)
+//continue
 const pos1_info = {
 'value': pos1.getAttribute('data-value') ,
 }
+const pos2_info = {
+'value': pos2.getAttribute('data-value') ,
+}
+
 
 
 </script>

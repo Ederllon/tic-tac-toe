@@ -46,14 +46,14 @@ const p8_click = document.getElementById('p8');
 const p9_click = document.getElementById('p9');
 //continue
 p1_click.addEventListener('click', ()=>{func_hit(p1_click,pos1_info);})
-p2_click.addEventListener('click', ()=>{func_hit(p2_click);})
-p3_click.addEventListener('click', ()=>{func_hit(p3_click);})
-p4_click.addEventListener('click', ()=>{func_hit(p4_click);})
-p5_click.addEventListener('click', ()=>{func_hit(p5_click);})
-p6_click.addEventListener('click', ()=>{func_hit(p6_click);})
-p7_click.addEventListener('click', ()=>{func_hit(p7_click);})
-p8_click.addEventListener('click', ()=>{func_hit(p8_click);})
-p9_click.addEventListener('click', ()=>{func_hit(p9_click);})
+p2_click.addEventListener('click', ()=>{func_hit(p2_click,pos2_info);})
+p3_click.addEventListener('click', ()=>{func_hit(p3_click,pos3_info);})
+p4_click.addEventListener('click', ()=>{func_hit(p4_click,pos4_info);})
+p5_click.addEventListener('click', ()=>{func_hit(p5_click,pos5_info);})
+p6_click.addEventListener('click', ()=>{func_hit(p6_click,pos6_info);})
+p7_click.addEventListener('click', ()=>{func_hit(p7_click,pos7_info);})
+p8_click.addEventListener('click', ()=>{func_hit(p8_click,pos8_info);})
+p9_click.addEventListener('click', ()=>{func_hit(p9_click,pos9_info);})
 
 //add um parametro para adicionar no html em cada uma das area😀
 function func_hit(when,posClick){
@@ -112,6 +112,27 @@ const pos1_info = {
 'value': pos1.getAttribute('data-value') ,
 }
 const pos2_info = {
+'value': pos2.getAttribute('data-value') ,
+}
+const pos3_info = {
+'value': pos2.getAttribute('data-value') ,
+}
+const pos4_info = {
+'value': pos2.getAttribute('data-value') ,
+}
+const pos5_info = {
+'value': pos2.getAttribute('data-value') ,
+}
+const pos6_info = {
+'value': pos2.getAttribute('data-value') ,
+}
+const pos7_info = {
+'value': pos2.getAttribute('data-value') ,
+}
+const pos8_info = {
+'value': pos2.getAttribute('data-value') ,
+}
+const pos9_info = {
 'value': pos2.getAttribute('data-value') ,
 }
 

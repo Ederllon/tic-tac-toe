@@ -79,12 +79,11 @@ function func_hit(when,posClick){
     //ação de oque fazer
     if(posClick.value == "" || posClick.value == null || posClick.value == undefined ){
       posClick.value = value_roundX;
+      //se tiver a area vazia, ele irá trocar😀
       if( roundX === true){
-        value_roundX = 'x';
         roundX = false;
       }
       else{
-        value_roundX = 'o'
         roundX = true;
       };
 

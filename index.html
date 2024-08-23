@@ -44,16 +44,27 @@ const p6_click = document.getElementById('p6');
 const p7_click = document.getElementById('p7');
 const p8_click = document.getElementById('p8');
 const p9_click = document.getElementById('p9');
+
+let pos1  = document.querySelector('#clicker1');
+let pos2  = document.querySelector('#clicker2');
+let pos3  = document.querySelector('#clicker3');
+let pos4  = document.querySelector('#clicker4');
+let pos5  = document.querySelector('#clicker5');
+let pos6  = document.querySelector('#clicker6');
+let pos7  = document.querySelector('#clicker7');
+let pos8  = document.querySelector('#clicker8');
+let pos9  = document.querySelector('#clicker9');
+
 //add em todas as areas a func😀
-p1_click.addEventListener('click', ()=>{func_hit(p1_click,pos1_info);})
-p2_click.addEventListener('click', ()=>{func_hit(p2_click,pos2_info);})
-p3_click.addEventListener('click', ()=>{func_hit(p3_click,pos3_info);})
-p4_click.addEventListener('click', ()=>{func_hit(p4_click,pos4_info);})
-p5_click.addEventListener('click', ()=>{func_hit(p5_click,pos5_info);})
-p6_click.addEventListener('click', ()=>{func_hit(p6_click,pos6_info);})
-p7_click.addEventListener('click', ()=>{func_hit(p7_click,pos7_info);})
-p8_click.addEventListener('click', ()=>{func_hit(p8_click,pos8_info);})
-p9_click.addEventListener('click', ()=>{func_hit(p9_click,pos9_info);})
+p1_click.addEventListener('click', ()=>{func_hit(pos1,pos1_info);})
+p2_click.addEventListener('click', ()=>{func_hit(pos2,pos2_info);})
+p3_click.addEventListener('click', ()=>{func_hit(pos3,pos3_info);})
+p4_click.addEventListener('click', ()=>{func_hit(pos4,pos4_info);})
+p5_click.addEventListener('click', ()=>{func_hit(pos5,pos5_info);})
+p6_click.addEventListener('click', ()=>{func_hit(pos6,pos6_info);})
+p7_click.addEventListener('click', ()=>{func_hit(pos7,pos7_info);})
+p8_click.addEventListener('click', ()=>{func_hit(pos8,pos8_info);})
+p9_click.addEventListener('click', ()=>{func_hit(pos9,pos9_info);})
 
 //add um parametro para adicionar no html em cada uma das area😀
 function func_hit(when,posClick){
@@ -65,8 +76,6 @@ function func_hit(when,posClick){
     if( roundX === true){
       value_roundX = 'x';
       
-        
-
     }else{
       value_roundX = 'o'
       
@@ -92,23 +101,12 @@ function func_hit(when,posClick){
 
   //adicionar innerhtml com o valor especifico na chamada, ex: funcao()😀
   when.innerHTML = posClick.value;
-  //edição sem css. apenas gerando ou gerar no css----------------------------------------------------------
-  when.style.color = "#f00";
+
   
 };
 
 //if de wins e todas as formas de ganhar
 
-
-let pos1  = document.querySelector('#clicker1');
-let pos2  = document.querySelector('#clicker2');
-let pos3  = document.querySelector('#clicker3');
-let pos4  = document.querySelector('#clicker4');
-let pos5  = document.querySelector('#clicker5');
-let pos6  = document.querySelector('#clicker6');
-let pos7  = document.querySelector('#clicker7');
-let pos8  = document.querySelector('#clicker8');
-let pos9  = document.querySelector('#clicker9');
 //database da positions, ficar todos os get (testar os valores em funcao click pra ver se eles mudam de repente)😀
 const pos1_info = {
 'value': pos1.getAttribute('data-value') ,

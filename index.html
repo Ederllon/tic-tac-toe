@@ -88,7 +88,7 @@ function func_hit(when,posClick){
     //ação de oque fazer
     if(posClick.value == "" || posClick.value == null || posClick.value == undefined ){
       posClick.value = value_roundX;
-      win();
+      win(value_roundX);
       //se tiver a area vazia, ele irá trocar😀
       if( roundX === true){
         roundX = false;
@@ -139,8 +139,11 @@ const pos9_info = {
 }
 
 //  //todos os wins com parametros de valor da jogada:------------------------------------------------------------
-function win(){
-
+function win(value_){
+  if(pos1_info.value == value_ && pos2_info.value == value_){
+    console.log('ganhou');
+  }
+  else{}
 }
 
 </script>

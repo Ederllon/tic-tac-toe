@@ -75,7 +75,7 @@ function func_hit(when,posClick){
 
     if( roundX === true){
       value_roundX = 'x';
-      
+
     }else{
       value_roundX = 'o'
       
@@ -88,6 +88,7 @@ function func_hit(when,posClick){
     //ação de oque fazer
     if(posClick.value == "" || posClick.value == null || posClick.value == undefined ){
       posClick.value = value_roundX;
+      win();
       //se tiver a area vazia, ele irá trocar😀
       if( roundX === true){
         roundX = false;
@@ -102,10 +103,11 @@ function func_hit(when,posClick){
   //adicionar innerhtml com o valor especifico na chamada, ex: funcao()😀
   when.innerHTML = posClick.value;
 
+
   
 };
 
-//if de wins e todas as formas de ganhar
+
 
 //database da positions, ficar todos os get (testar os valores em funcao click pra ver se eles mudam de repente)😀
 const pos1_info = {
@@ -136,7 +138,10 @@ const pos9_info = {
 'value': pos2.getAttribute('data-value') ,
 }
 
+//  //todos os wins com parametros de valor da jogada:------------------------------------------------------------
+function win(){
 
+}
 
 </script>
 <script src="script.js">

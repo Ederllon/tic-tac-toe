@@ -102,6 +102,8 @@ function func_hit(when,posClick){
 
   //adicionar innerhtml com o valor especifico na chamada, ex: funcao()😀
   when.innerHTML = posClick.value;
+  when.style.fontSize = "50px";
+  when.style.margin = "18px -1.7px";
 
 
   
@@ -139,12 +141,33 @@ const pos9_info = {
 }
 
 //  //todos os wins com parametros de valor da jogada:------------------------------------------------------------
+var pw1 = false;
+var pw2 = false;
+var pw3 = false;
+
+function tw(){
+  console.log('ganhou');
+}
+
 function win(value_){
-  if(pos1_info.value == value_ && pos2_info.value == value_){
-    console.log('ganhou');
+  if(pos1_info.value == value_ && pos2_info.value == value_ && pos3_info.value == value_){
+   while(pw1 == false){
+    tw();
+    pw1 = true;
+    break;
+   }
   }
   else{}
-}
+    if(pos4_info.value == value_ && pos5_info.value == value_ && pos6_info.value == value_){
+     
+    }
+    else{}
+      if(pos7_info.value == value_ && pos8_info.value == value_ && pos9_info.value == value_){
+       
+      }else{}
+    }
+  
+
 
 </script>
 <script src="script.js">

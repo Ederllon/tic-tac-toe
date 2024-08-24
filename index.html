@@ -141,9 +141,7 @@ const pos9_info = {
 }
 
 //  //todos os wins com parametros de valor da jogada:------------------------------------------------------------
-var pw1 = false;
-var pw2 = false;
-var pw3 = false;
+var pw_ = false;
 
 function tw(){
   console.log('ganhou');
@@ -151,28 +149,49 @@ function tw(){
 
 function win(value_){
   if(pos1_info.value == value_ && pos2_info.value == value_ && pos3_info.value == value_){
-   while(pw1 == false){
+   while(pw_ == false){
     tw();
-    pw1 = true;
+    pw_ = true;
     break;
    }
   }
   else{}
     if(pos4_info.value == value_ && pos5_info.value == value_ && pos6_info.value == value_){
-      while(pw2 == false){
+      while(pw_ == false){
         tw();
-        pw2 = true;
+        pw_ = true;
         break;
       }
     }
     else{}
       if(pos7_info.value == value_ && pos8_info.value == value_ && pos9_info.value == value_){
-        while(pw3 == false){
+        while(pw_ == false){
         tw();
-        pw3 = true;
+        pw_ = true;
         break;
       }
       }else{}
+      
+      if(pos1_info.value == value_ && pos4_info.value == value_ && pos7_info.value == value_){
+        while(pw_ == false){
+        tw();
+        pw_ = true;
+        break;
+      }
+    }
+      else{}
+      if(pos2_info.value == value_ && pos5_info.value == value_ && pos8_info.value == value_){
+        while(pw_ == false){
+        tw();
+        pw_ = true;
+        break;
+      }
+    }
+      
+      
+
+
+
     }
   
 //if pos == value && pw = false, fazer empate no final------------------------------------

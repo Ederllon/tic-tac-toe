@@ -70,8 +70,7 @@ p9_click.addEventListener('click', ()=>{func_hit(pos9,pos9_info);})
 function func_hit(when,posClick){
   let value_roundX = null;
 
-      //if pra vez do jogador e sistemas dcontinuação
-      // verificador de vez do round e se 😀
+  // verificador de vez do round e se 😀
 
     if( roundX === true){
       value_roundX = 'x';
@@ -148,6 +147,7 @@ var pw_ = false;
 function win(value_){
   if(pos1_info.value == value_ && pos2_info.value == value_ && pos3_info.value == value_){
    while(pw_ == false){
+    var info_win = 1;
     tw();
     pw_ = true;
     break;
@@ -156,58 +156,65 @@ function win(value_){
   else{}
     if(pos4_info.value == value_ && pos5_info.value == value_ && pos6_info.value == value_){
       while(pw_ == false){
-        tw();
-        pw_ = true;
-        break;
+          info_win = 2;
+          tw();
+          pw_ = true;
+          break;
       }
     }
     else{}
       if(pos7_info.value == value_ && pos8_info.value == value_ && pos9_info.value == value_){
         while(pw_ == false){
-        tw();
-        pw_ = true;
-        break;
+          info_win = 3;
+          tw();
+          pw_ = true;
+          break;
       }
       }else{}
       
       if(pos1_info.value == value_ && pos4_info.value == value_ && pos7_info.value == value_){
         while(pw_ == false){
-        tw();
-        pw_ = true;
+          info_win = 4;
+          tw();
+          pw_ = true;
         break;
       }
     }
       else{}
       if(pos2_info.value == value_ && pos5_info.value == value_ && pos8_info.value == value_){
         while(pw_ == false){
-        tw();
-        pw_ = true;
-        break;
+          info_win = 5;
+          tw();
+          pw_ = true;
+          break;
       }
     } 
     else{}
     if(pos3_info.value == value_ && pos6_info.value == value_ && pos9_info.value == value_){
         while(pw_ == false){
-        tw();
-        pw_ = true;
-        break;
+          info_win = 6;
+          tw();
+          pw_ = true;
+          break;
       }
     } 
     else{}
     if(pos1_info.value == value_ && pos5_info.value == value_ && pos9_info.value == value_){
         while(pw_ == false){
-        tw();
-        pw_ = true;
-        break;
+          info_win = 7;
+          tw();
+          pw_ = true;
+          break;
       }
     } 
     else{}
 
     if(pos3_info.value == value_ && pos5_info.value == value_ && pos7_info.value == value_){
         while(pw_ == false){
-        tw();
-        pw_ = true;
-        break;
+          info_win = 8;
+          tw();
+          pw_ = true;
+          break;
       }
     } 
     else{}
@@ -217,11 +224,19 @@ function win(value_){
   
 //if pos == value && pw = false, fazer empate no final^^^^😀
 
+//fazer sistema de comparar o ponto dado, apagarlo  e pegar de q valores do win especifico (se o win for 1, pegar o primeiro pos dele)
+//retornar na tabela o número do de pontos.
+//apagar os valores do X O para deixar em branco o tab
+var info_win = 0;
+var value_player1 = 0;
+var value_player2 =  0;
 
 function tw(){
 
   setTimeout(()=>{
-    //fazer ações do  win--------------------------------------------------
+
+
+
     
     
   }, 2000)

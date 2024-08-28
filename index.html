@@ -148,7 +148,7 @@ var pw_ = false;
 function win(value_){
   if(pos1_info.value == value_ && pos2_info.value == value_ && pos3_info.value == value_){
    while(pw_ == false){
-    var info_win = 1;
+    info_win = 1;
     tw();
     pw_ = true;
     break;
@@ -262,7 +262,7 @@ const playerPointO = document.getElementById('pointO');
 //fazer sistema de mostrar quem ganhou em periodos de tempo
 
 function tw(){
-  console.log(info_win)
+  console.log(info_win);
   setTimeout(()=>{
     resetPos();
     

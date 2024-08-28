@@ -249,8 +249,8 @@ function win(value_){
   
 
 
-//fazer sistema de comparar o ponto dado,  e pegar de q valores do win especifico (se o win for 1, pegar o primeiro pos dele)
-//retornar na tabela o número do de pontos.
+//fazer sistema de comparar o ponto dado,  e pegar de q valores do win especifico para decidir quem marca pontos(se o win for 1, pegar o primeiro pos dele)
+//retornar na tabela o número de pontos.
 
 
 var info_win = 0;
@@ -262,7 +262,7 @@ const playerPointO = document.getElementById('pointO');
 //fazer sistema de mostrar quem ganhou em periodos de tempo
 
 function tw(){
-
+  console.log(info_win)
   setTimeout(()=>{
     resetPos();
     

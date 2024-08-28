@@ -101,6 +101,7 @@ function func_hit(when,posClick){
 
   //adicionar innerhtml com o valor especifico na chamada, ex: funcao()😀
   when.innerHTML = posClick.value;
+  //----------------------------------------------------- ajustar fonte
   when.style.fontSize = "50px";
   when.style.margin = "18px -1.7px";
 
@@ -221,11 +222,19 @@ function win(value_){
     
     
     }
+
+    //zerador de posinfo e inners do valores X e O
+    function resetPos(){
+      pos1_info.value = null;
+      pos2_info.value = null;
+      
+    }
   
 //if pos == value && pw = false, fazer empate no final^^^^😀
 
 //fazer sistema de comparar o ponto dado, apagarlo  e pegar de q valores do win especifico (se o win for 1, pegar o primeiro pos dele)
 //retornar na tabela o número do de pontos.
+
 //apagar os valores do X O para deixar em branco o tab
 var info_win = 0;
 var value_player1 = 0;
@@ -234,10 +243,12 @@ var value_player2 =  0;
 function tw(){
 
   setTimeout(()=>{
+    resetPos();
+    console.log(pos1_info.value);
 
 
 
-    
+
     
   }, 2000)
 }

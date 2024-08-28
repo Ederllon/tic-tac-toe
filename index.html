@@ -31,7 +31,7 @@
 
 </div>
 </div>
-  <div class="table">Tabela: <h2 class="number1 numberrs"> 0 </h2>x<h2 class="number2 numberrs">0</h2></div>
+  <div class="table">Tabela: <h2 id="pointX" class="number1 numberrs"> 0 </h2>x<h2 id="pointO" class="number2 numberrs">0</h2></div>
 </body>
 <script>
 var roundX = true;
@@ -254,8 +254,12 @@ function win(value_){
 
 
 var info_win = 0;
-var value_player1 = 0;
-var value_player2 =  0;
+var value_playerX = 0;
+var value_playerO =  0;
+const playerPointX = document.getElementById('pointX');
+const playerPointO = document.getElementById('pointO');
+//fazer sistema de mostrar vez de jogada
+//fazer sistema de mostrar quem ganhou em periodos de tempo
 
 function tw(){
 

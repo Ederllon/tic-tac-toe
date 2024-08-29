@@ -225,6 +225,7 @@ function win(value_){
     //if pos == value && pw = false, fazer empate no final^^^^😀
 
     //zerador de posinfo e inners do valores X e O😀
+    //reset pos----------------------------
     function resetPos(){
       pos1_info.value = null;
       pos2_info.value = null;
@@ -261,7 +262,7 @@ var value_player2 =  0;
 
 const playerPointX = document.getElementById('pointX');
 const playerPointO = document.getElementById('pointO');
-
+//--------------------------marca pontos
 function point_add1(){
   if(pos1_info.value == 'x'){
       value_player1 = value_player1 + 1;
@@ -309,23 +310,23 @@ function point_add7(){
 function tw(){
 
   if(info_win == 1 || info_win == 4 || info_win == 7){
-    document.addEventListener('ready',point_add1());
+    document.addEventListener('load',point_add1());
 
 
       }
   else{
     if(info_win == 5){
-      document.addEventListener('ready',point_add2());
+      document.addEventListener('load',point_add2());
 }else{
   if(info_win == 6 || info_win == 8){
-    document.addEventListener('ready',point_add3());
+    document.addEventListener('load',point_add3());
   }else{
     if(info_win == 2){
-    document.addEventListener('ready',point_add4());
+    document.addEventListener('load',point_add4());
   }else{
 
     if(info_win == 3){
-      document.addEventListener('ready',point_add7());
+      document.addEventListener('load',point_add7());
     }else{}
   }
   }
@@ -351,7 +352,7 @@ function tw(){
   }, 2000)
 
 }
-
+  
 </script>
 <script src="script.js">
 </script>

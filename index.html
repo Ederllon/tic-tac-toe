@@ -141,82 +141,68 @@ const pos9_info = {
 };
 
 //  //todos os wins com parametros de valor da jogada😀
-var pw_ = false;
+
 
 
 
 function win(value_){
   if(pos1_info.value == value_ && pos2_info.value == value_ && pos3_info.value == value_){
-   if(pw_ == false){
+   
     info_win = 1;
     
-    pw_ = true;
+    
    tw();
-   } else{}
+   
   }
   else{}
     if(pos4_info.value == value_ && pos5_info.value == value_ && pos6_info.value == value_){
-      if(pw_ == false){
-          info_win = 2;
+      info_win = 2;
           
-          pw_ = true;
-         tw();
-      }else{}
+          
+          tw();
     }
     else{}
       if(pos7_info.value == value_ && pos8_info.value == value_ && pos9_info.value == value_){
-        if(pw_ == false){
-          info_win = 3;
+        info_win = 3;
           
-          pw_ = true;
+          
          tw();
-      }else{}
       }else{}
       
       if(pos1_info.value == value_ && pos4_info.value == value_ && pos7_info.value == value_){
-        if(pw_ == false){
-          info_win = 4;
+        info_win = 4;
           
-          pw_ = true;
-       tw();
-      }
+          
+          tw();
     }
       else{}
       if(pos2_info.value == value_ && pos5_info.value == value_ && pos8_info.value == value_){
-        if(pw_ == false){
-          info_win = 5;
+        info_win = 5;
           
-          pw_ = true;
-         tw();
-      }else{}
+          
+          tw();
     } 
     else{}
     if(pos3_info.value == value_ && pos6_info.value == value_ && pos9_info.value == value_){
-        if(pw_ == false){
-          info_win = 6;
-          
-          pw_ = true;
-         tw();
-      }else{}
+      info_win = 6;
+      tw();
     } 
     else{}
     if(pos1_info.value == value_ && pos5_info.value == value_ && pos9_info.value == value_){
         if(pw_ == false){
           info_win = 7;
           
-          pw_ = true;
-         tw();
+          
+          tw();
       }else{}
     } 
     else{}
 
     if(pos3_info.value == value_ && pos5_info.value == value_ && pos7_info.value == value_){
-        if(pw_ == false){
-          info_win = 8;
+      info_win = 8;
           
-          pw_ = true;
-         tw();
-      }else{}
+          
+          tw();
     } 
     else{}
     
@@ -351,8 +337,7 @@ function tw(){
   playerPointO.innerHTML = value_player2; 
   //----------------------------
   info_win = 0;
-  pw_ = false;
-
+ 
   setTimeout(function(){
     resetPos();
     roundX = true;

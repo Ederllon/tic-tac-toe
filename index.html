@@ -142,45 +142,50 @@ const pos9_info = {
 
 //  //todos os wins com parametros de valor da jogada😀
 
+function colorWin(p1,p2,p3){
+  p1.style.color = "#d00";
+  p2.style.color = "#d00";
+  p3.style.color = "#d00";
+  setTimeout(()=>{
+      p1.style.color = "#000";
+      p2.style.color = "#000";
+      p3.style.color = "#000";
+    },2000)
 
+}
 
 
 function win(value_){
   if(pos1_info.value == value_ && pos2_info.value == value_ && pos3_info.value == value_){
-   
+    colorWin(pos1, pos2, pos3);
     info_win = 1;
-    
-    
    tw();
+ 
    
   }
   else{}
     if(pos4_info.value == value_ && pos5_info.value == value_ && pos6_info.value == value_){
+      colorWin(pos4, pos5, pos6);
       info_win = 2;
-          
-          
-          tw();
+      tw();
     }
     else{}
       if(pos7_info.value == value_ && pos8_info.value == value_ && pos9_info.value == value_){
+        colorWin(pos7, pos8, pos9);
         info_win = 3;
-          
-          
          tw();
       }else{}
       
       if(pos1_info.value == value_ && pos4_info.value == value_ && pos7_info.value == value_){
-        info_win = 4;
-          
-          
-          tw();
+        colorWin(pos1, pos4, pos7);
+        info_win = 4;         
+        tw();
     }
       else{}
       if(pos2_info.value == value_ && pos5_info.value == value_ && pos8_info.value == value_){
-        info_win = 5;
-          
-          
-          tw();
+        colorWin(pos2, pos5, pos8);
+        info_win = 5;          
+        tw();
     } 
     else{}
     if(pos3_info.value == value_ && pos6_info.value == value_ && pos9_info.value == value_){
@@ -200,6 +205,7 @@ function win(value_){
 
     if(pos3_info.value == value_ && pos5_info.value == value_ && pos7_info.value == value_){
       info_win = 8;
+      
           
           
           tw();

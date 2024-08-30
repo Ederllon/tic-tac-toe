@@ -189,26 +189,24 @@ function win(value_){
     } 
     else{}
     if(pos3_info.value == value_ && pos6_info.value == value_ && pos9_info.value == value_){
+      colorWin(pos3, pos6, pos9);
       info_win = 6;
       tw();
     } 
     else{}
     if(pos1_info.value == value_ && pos5_info.value == value_ && pos9_info.value == value_){
-        if(pw_ == false){
-          info_win = 7;
-          
-          
-          tw();
-      }else{}
+      
+      colorWin(pos1, pos5, pos9);    
+      info_win = 7;          
+      tw();
+      
     } 
     else{}
 
     if(pos3_info.value == value_ && pos5_info.value == value_ && pos7_info.value == value_){
+      colorWin(pos3, pos5, pos7);
       info_win = 8;
-      
-          
-          
-          tw();
+      tw();
     } 
     else{}
     
@@ -343,7 +341,6 @@ function tw(){
  
   setTimeout(function(){
     resetPos();
-    roundX = true;
 
   }, 2000)
 }
@@ -355,8 +352,8 @@ function tw(){
 
   //fazer sistema de mostrar vez de jogada
 //fazer sistema de mostrar quem ganhou em periodos de tempo usando datas e uma lista a parte com scroll
+//fazer sistema de empate
 </script>
 <script src="script.js">
 </script>
 </html>
- 

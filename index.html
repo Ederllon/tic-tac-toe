@@ -138,7 +138,7 @@ const pos8_info = {
 }
 const pos9_info = {
 'value': pos2.getAttribute('data-value') ,
-}
+};
 
 //  //todos os wins com parametros de valor da jogada😀
 var pw_ = false;
@@ -147,76 +147,76 @@ var pw_ = false;
 
 function win(value_){
   if(pos1_info.value == value_ && pos2_info.value == value_ && pos3_info.value == value_){
-   while(pw_ == false){
+   if(pw_ == false){
     info_win = 1;
-    tw();
+    
     pw_ = true;
-    break;
-   }
+   tw();
+   } else{}
   }
   else{}
     if(pos4_info.value == value_ && pos5_info.value == value_ && pos6_info.value == value_){
-      while(pw_ == false){
+      if(pw_ == false){
           info_win = 2;
-          tw();
+          
           pw_ = true;
-          break;
-      }
+         tw();
+      }else{}
     }
     else{}
       if(pos7_info.value == value_ && pos8_info.value == value_ && pos9_info.value == value_){
-        while(pw_ == false){
+        if(pw_ == false){
           info_win = 3;
-          tw();
+          
           pw_ = true;
-          break;
-      }
+         tw();
+      }else{}
       }else{}
       
       if(pos1_info.value == value_ && pos4_info.value == value_ && pos7_info.value == value_){
-        while(pw_ == false){
+        if(pw_ == false){
           info_win = 4;
-          tw();
+          
           pw_ = true;
-        break;
+       tw();
       }
     }
       else{}
       if(pos2_info.value == value_ && pos5_info.value == value_ && pos8_info.value == value_){
-        while(pw_ == false){
+        if(pw_ == false){
           info_win = 5;
-          tw();
+          
           pw_ = true;
-          break;
-      }
+         tw();
+      }else{}
     } 
     else{}
     if(pos3_info.value == value_ && pos6_info.value == value_ && pos9_info.value == value_){
-        while(pw_ == false){
+        if(pw_ == false){
           info_win = 6;
-          tw();
+          
           pw_ = true;
-          break;
-      }
+         tw();
+      }else{}
     } 
     else{}
     if(pos1_info.value == value_ && pos5_info.value == value_ && pos9_info.value == value_){
-        while(pw_ == false){
+        if(pw_ == false){
           info_win = 7;
-          tw();
+          
           pw_ = true;
-          break;
-      }
+         tw();
+      }else{}
     } 
     else{}
 
     if(pos3_info.value == value_ && pos5_info.value == value_ && pos7_info.value == value_){
-        while(pw_ == false){
+        if(pw_ == false){
           info_win = 8;
-          tw();
+          
           pw_ = true;
-          break;
-      }
+         tw();
+      }else{}
     } 
     else{}
     
@@ -346,26 +346,25 @@ function tw(){
 
   }
 }
+
   playerPointX.innerHTML = value_player1;
   playerPointO.innerHTML = value_player2; 
   //----------------------------
-  zemane();
+  info_win = 0;
+  pw_ = false;
 
-
-
-}
-function zemane(){
-  setTimeout(()=>{
+  setTimeout(function(){
     resetPos();
-    info_win = 0;
-    
+    roundX = true;
 
-
-
-
-    
   }, 2000)
 }
+
+
+
+
+
+
   
 </script>
 <script src="script.js">

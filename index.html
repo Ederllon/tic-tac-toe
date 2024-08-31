@@ -365,11 +365,18 @@ sr.innerHTML = "x";
 
 ////mostrar a vez de quem for jogar😀
 //fazer sistema de empate
+var draw = false;
 function drawAnal(){
-if((pos1_info.value && pos2_info.value && pos3_info.value && pos4_info.value) != "" ){
-  console.log('pos1 e 2 tão preenchido');
-
+if(draw == false && (pos1_info.value && pos2_info.value && pos3_info.value && pos4_info.value && pos5_info.value && pos6_info.value && pos7_info.value && pos8_info.value && pos9_info.value) != ""){
+  draw = true;
 }else{}
+
+  if(draw == true){
+    setTimeout(()=>{
+    resetPos();
+    draw = false;
+    },2000)
+  }else{}
 }
 
 

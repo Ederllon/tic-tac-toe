@@ -32,6 +32,9 @@
 </div>
 </div>
   <div class="table">Tabela: <h2 id="pointX" class="number1 numberrs"> 0 </h2>x<h2 id="pointO" class="number2 numberrs">0</h2></div>
+
+
+<div id="showVez"> <h1>RODADA:  </h1><h1 id="showRound"></h1></div>
 </body>
 <script>
 var roundX = true;
@@ -104,6 +107,13 @@ function func_hit(when,posClick){
   //----------------------------------------------------- ajustar fonte
   when.style.fontSize = "50px";
   when.style.margin = "18px -1.7px";
+
+
+  if(roundX == true){
+  sr.innerHTML = "x";
+}else{
+  sr.innerHTML = "o";
+}
 
 
   
@@ -345,6 +355,8 @@ function tw(){
   }, 2000)
 }
 
+const sr = document.querySelector('#showRound');
+sr.innerHTML = "x";
 
 
 

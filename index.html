@@ -71,6 +71,7 @@ p9_click.addEventListener('click', ()=>{func_hit(pos9,pos9_info);})
 
 //add um parametro para adicionar no html em cada uma das area😀
 function func_hit(when,posClick){
+  
   let value_roundX = null;
 
   // verificador de vez do round e se 😀
@@ -220,6 +221,8 @@ function win(value_){
     } 
     else{}
     
+    drawAnal();
+
     
     }
     //if pos == value && pw = false, fazer empate no final^^^^😀
@@ -362,6 +365,14 @@ sr.innerHTML = "x";
 
 ////mostrar a vez de quem for jogar😀
 //fazer sistema de empate
+function drawAnal(){
+if((pos1_info.value && pos2_info.value && pos3_info.value && pos4_info.value) != "" ){
+  console.log('pos1 e 2 tão preenchido');
+
+}else{}
+}
+
+
 //fazer sistema de mostrar quem ganhou em periodos de tempo usando datas e uma lista a parte com scroll
 
 </script>

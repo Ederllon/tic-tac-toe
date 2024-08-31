@@ -227,7 +227,7 @@ function win(value_){
         draw = true; 
         resetPos();
         draw = false;
-      },100)
+      },2000)
       
    
       
@@ -266,7 +266,18 @@ function win(value_){
       pos7.setAttribute('data-value', '');
       pos8.setAttribute('data-value', '');
       pos9.setAttribute('data-value', '');    
+      if(roundX == false && draw == false){
+      console.log('false: X');}
+    else{
+      if(roundX == true && draw == false){
+        console.log('true: O');
+      }else{
+        if(draw == true){
+          console.log('draw');
+        }else{}
+      }
     }
+  }
   
 
 

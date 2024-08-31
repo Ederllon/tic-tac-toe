@@ -124,3 +124,19 @@ transform: translate(50px,-190px);
   
   
                                 }
+
+                                #showVez{
+                                    display: flex;
+                                    border:1px solid black;
+                                    transform: translate(0,-100px);
+                                    justify-content: center;
+                                    padding-top: 20%;
+                                    
+                                }
+                                #showRound{
+                                    font-size: 5.5em;
+                                    margin-left: 5px;
+                                    margin-top: -0.23em;
+                                    color:red;
+                                    
+                                }

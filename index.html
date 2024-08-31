@@ -221,7 +221,14 @@ function win(value_){
     } 
     else{}
     
-    drawAnal();
+
+    if(draw == false && pos1_info.value !== "" && pos2_info.value !== "" && pos3_info.value !== "" && pos4_info.value !== "" && pos5_info.value !== "" && pos6_info.value !== "" && pos7_info.value !== "" && pos8_info.value !== "" && pos9_info.value !== ""){
+      draw = true;
+      
+        resetPos();
+        draw = false;
+      
+  }else{}
 
     
     }
@@ -367,17 +374,8 @@ sr.innerHTML = "x";
 //fazer sistema de empate
 var draw = false;
 
-function drawAnal(){
-if(draw == false && pos1_info.value != "" && pos2_info.value != "" && pos3_info.value != "" && pos4_info.value != "" && pos5_info.value != "" && pos6_info.value != "" && pos7_info.value != "" && pos8_info.value != "" && pos9_info.value != ""){
-  draw = true;
-  setTimeout(()=>{
-      resetPos();
-      
-    },500);
-}else{}
 
 
-}
 
 
 //fazer sistema de mostrar quem ganhou em periodos de tempo usando datas e uma lista a parte com scroll

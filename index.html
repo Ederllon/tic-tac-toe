@@ -221,31 +221,33 @@ function win(value_){
     } 
     else{}
     
-
-    if(draw == false && pos1_info.value !== "" && pos2_info.value !== "" && pos3_info.value !== "" && pos4_info.value !== "" && pos5_info.value !== "" && pos6_info.value !== "" && pos7_info.value !== "" && pos8_info.value !== "" && pos9_info.value !== ""){
-      draw = true;
-      
+    if(draw == false){
+    if(pos1_info.value !== "" && pos2_info.value !== "" && pos3_info.value !== "" && pos4_info.value !== "" && pos5_info.value !== "" && pos6_info.value !== "" && pos7_info.value !== "" && pos8_info.value !== "" && pos9_info.value !== ""){
+      setTimeout(()=>{
+        draw = true; 
         resetPos();
         draw = false;
+      },100)
       
-  }else{}
+   
+      
+  }else{}}else{}
 
-    
     }
     //if pos == value && pw = false, fazer empate no final^^^^😀
 
     //zerador de posinfo e inners do valores X e O😀
     //reset pos----------------------------
     function resetPos(){
-      pos1_info.value = null;
-      pos2_info.value = null;
-      pos3_info.value = null;
-      pos4_info.value = null;
-      pos5_info.value = null;
-      pos6_info.value = null;
-      pos7_info.value = null;
-      pos8_info.value = null;
-      pos9_info.value = null;
+      pos1_info.value = "";
+      pos2_info.value = "";
+      pos3_info.value = "";
+      pos4_info.value = "";
+      pos5_info.value = "";
+      pos6_info.value = "";
+      pos7_info.value = "";
+      pos8_info.value = "";
+      pos9_info.value = "";
       pos1.innerHTML = "";
       pos2.innerHTML = "";
       pos3.innerHTML = "";
@@ -371,7 +373,7 @@ sr.innerHTML = "x";
 
 
 ////mostrar a vez de quem for jogar😀
-//fazer sistema de empate
+//fazer sistema de empate😀
 var draw = false;
 
 
@@ -379,7 +381,7 @@ var draw = false;
 
 
 //fazer sistema de mostrar quem ganhou em periodos de tempo usando datas e uma lista a parte com scroll
-
+//roundx true e false, draw = true , fazer tudo isso no reset function
 </script>
 <script src="script.js">
 </script>

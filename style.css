@@ -159,3 +159,7 @@ transform: translate(50px,-190px);
                                     margin-top: 2px;
                                     color:black;
                                 }
+                                #p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9{
+                                    
+                                    margin: -7.5px 0 0 1px;
+                                }

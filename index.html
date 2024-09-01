@@ -33,6 +33,9 @@
 </div>
   <div class="table">Tabela: <h2 id="pointX" class="number1 numberrs"> 0 </h2>x<h2 id="pointO" class="number2 numberrs">0</h2></div>
 
+<div id="winlist">Historico: </div>
+
+
 
 <div id="showVez"> <h1>RODADA:  </h1><h1 id="showRound"></h1></div>
 </body>
@@ -270,18 +273,24 @@ function win(value_){
       let hour_ = Data.getHours();
       let minute_ = Data.getMinutes();
       let second_ = Data.getSeconds();
-
+      function subW(who){
+  wlist.innerHTML += "<div class='wl'> "+ who +" ganhou às: "+formatHour(hour_) + ":" + formatHour(minute_)+":"+ formatHour(second_) +"</div>";
+}
      
 
+      
+  
+
+
       if(roundX == false && draw == false){
-      console.log(formatHour( hour_) + ":" + formatHour(minute_));
+        subW('X');
     }
     else{
       if(roundX == true && draw == false){
-        console.log('');
+        subW('O');
       }else{
         if(draw == true){
-          console.log('');
+          subW('Ninguem');
         }else{}
       }
     }
@@ -402,6 +411,8 @@ function formatHour(value) {
 }
 
 
+
+const wlist = document.querySelector('#winlist');
 
 
 

@@ -281,21 +281,36 @@ function win(value_){
      
 
       
-  
+  //var
+      var dControl = null;
 
 
+        
       if(roundX == false && draw == false){
+        
         subW('X');
+        dControl = null;
+        
     }
     else{
       if(roundX == true && draw == false){
+        
         subW('O');
+        dControl = null;
       }else{
-        if(draw == true){
-          subW('Ninguem');
-        }else{}
+        
       }
     }
+    if(draw == true){
+      dControl = null;
+    }else{}
+
+    if(dControl == false){
+        if(dControl == false){
+          subW('Ninguem');}else{}
+        }else{}
+    
+
   }
 
   

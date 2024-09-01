@@ -1,448 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo Da Velha</title>
-</head>
-<body>
+body{
+    user-select: none;
+    align-content: center;
+    overflow: hidden;
+}
+
+#main{
+    width:100%;
+    height:500px;
+
+}
+
+.colorM{
+    background:#000;
+}
+
+.form1{
+    transform: translate(50px,50px);
+}
+.form2{
+    transform: translate(80px,20px);
+}
+.form3{
+    transform: translate(50px,-20px);
+}
+.form4{
+    transform: translate(110px,-85px);
+}
+
+.h{
+    width:100px;
+    height: 5px;
+}
+.v{
+    width:5px;
+    height: 100px;
+}
 
 
-<div id="main">    
-<div class="colorM form1 h"></div>
-<div class="colorM form2 v"></div>
-<div class="colorM form3 h"></div>
-<div class="colorM form4 v"></div>
-<div id="local"> 
-<div class="fixed" id="p1"><h1 class="default_clicker " id="clicker1" data-value=""></h1></div>
-<div class="fixed" id="p2"><h1 class="default_clicker " id="clicker2" data-value=""></h1></div>
-<div class="fixed" id="p3"><h1 class="default_clicker " id="clicker3" data-value=""></h1></div>
-<div class="fixed" id="p4"><h1 class="default_clicker " id="clicker4" data-value=""></h1></div>
-<div class="fixed" id="p5"><h1 class="default_clicker " id="clicker5" data-value=""></h1></div>
-<div class="fixed" id="p6"><h1 class="default_clicker " id="clicker6" data-value=""></h1></div>
-<div class="fixed" id="p7"><h1 class="default_clicker " id="clicker7" data-value=""></h1></div>
-<div class="fixed" id="p8"><h1 class="default_clicker " id="clicker8" data-value=""></h1></div>
-<div class="fixed" id="p9"><h1 class="default_clicker " id="clicker9" data-value=""></h1></div>
+#local{
+position:absolute;
 
-</div>
-</div>
-  <div class="table">Tabela: <h2 id="pointX" class="number1 numberrs"> 0 </h2>x<h2 id="pointO" class="number2 numberrs">0</h2></div>
+}
 
-<div id="winlist">Historico: </div>
+.fixed{
+    position:fixed;
+    width: 30px;
+    height: 30px;
+
+}
 
 
+#p1{
 
-<div id="showVez"> <h1>RODADA:  </h1><h1 id="showRound"></h1></div>
-
-
-</body>
-<script>
-var roundX = true;
-const p1_click = document.getElementById('p1');
-const p2_click = document.getElementById('p2');
-const p3_click = document.getElementById('p3');
-const p4_click = document.getElementById('p4');
-const p5_click = document.getElementById('p5');
-const p6_click = document.getElementById('p6');
-const p7_click = document.getElementById('p7');
-const p8_click = document.getElementById('p8');
-const p9_click = document.getElementById('p9');
-
-let pos1  = document.querySelector('#clicker1');
-let pos2  = document.querySelector('#clicker2');
-let pos3  = document.querySelector('#clicker3');
-let pos4  = document.querySelector('#clicker4');
-let pos5  = document.querySelector('#clicker5');
-let pos6  = document.querySelector('#clicker6');
-let pos7  = document.querySelector('#clicker7');
-let pos8  = document.querySelector('#clicker8');
-let pos9  = document.querySelector('#clicker9');
-
-//add em todas as areas a func😀
-p1_click.addEventListener('click', ()=>{func_hit(pos1,pos1_info);})
-p2_click.addEventListener('click', ()=>{func_hit(pos2,pos2_info);})
-p3_click.addEventListener('click', ()=>{func_hit(pos3,pos3_info);})
-p4_click.addEventListener('click', ()=>{func_hit(pos4,pos4_info);})
-p5_click.addEventListener('click', ()=>{func_hit(pos5,pos5_info);})
-p6_click.addEventListener('click', ()=>{func_hit(pos6,pos6_info);})
-p7_click.addEventListener('click', ()=>{func_hit(pos7,pos7_info);})
-p8_click.addEventListener('click', ()=>{func_hit(pos8,pos8_info);})
-p9_click.addEventListener('click', ()=>{func_hit(pos9,pos9_info);})
-
-//add um parametro para adicionar no html em cada uma das area😀
-function func_hit(when,posClick){
-  
-  let value_roundX = null;
-
-  // verificador de vez do round e se 😀
-
-    if( roundX === true){
-      value_roundX = 'x';
-
-    }else{
-      value_roundX = 'o'
-      
-    };
-      
-
-    //fazer if pra ver se data value esta vazio e sistemas😀
+transform: translate(50px,-190px);
+}
+#p2{
     
+    transform: translate(80px,-190px);
+    }
+    #p3{
+       
+        transform: translate(110px,-190px);
+        }
+        #p4{
+
+            transform: translate(50px,-155px);
+            }
+            #p5{
+    
+                transform: translate(80px,-155px);
+                }
+                #p6{
+
+                    transform: translate(110px,-155px);
+                    }
+                    #p7{
+    
+                        transform: translate(50px,-120px);
+                        }
+                        #p8{
+        
+                            transform: translate(80px,-120px);
+                            }
+                            #p9{
+            
+                                transform: translate(110px,-120px);
+                                }
+                                .default_clicker{
+                                    font-family: "Roboto", sans-serif;
+                                    font-weight: 500;
+                                    font-size:40px;
+                                    z-index: 10;
+                                    position: fixed;
+                                    transform:translate(5.5px, -38px);
+                                } 
+
+                                .table{
+  
+                                    margin:-500px 0 0 175px;
+  
+                                    position:fixed;
+  
+                                    font-size: 40px;
+  
+                                    border: solid 1px #000;
+  
+                                    padding:2px;
    
-    //ação de oque fazer
-    if(posClick.value == "" || posClick.value == null || posClick.value == undefined ){
-      posClick.value = value_roundX;
-      win(value_roundX);
-      //se tiver a area vazia, ele irá trocar😀
-      if( roundX === true){
-        roundX = false;
-      }
-      else{
-        roundX = true;
-      };
-
-
-    }else{}
-
-  //adicionar innerhtml com o valor especifico na chamada, ex: funcao()😀
-  when.innerHTML = posClick.value;
-  //----------------------------------------------------- ajustar fonte
-  when.style.fontSize = "50px";
-  when.style.margin = "18px -1.7px";
-
-
-  if(roundX == true){
-  sr.innerHTML = "x";
-}else{
-  sr.innerHTML = "o";
-}
-
-
+                                    display: flex;
   
-};
-
-
-
-//database da positions, ficar todos os get (testar os valores em funcao click pra ver se eles mudam de repente)😀
-const pos1_info = {
-'value': pos1.getAttribute('data-value') ,
-}
-const pos2_info = {
-'value': pos2.getAttribute('data-value') ,
-}
-const pos3_info = {
-'value': pos2.getAttribute('data-value') ,
-}
-const pos4_info = {
-'value': pos2.getAttribute('data-value') ,
-}
-const pos5_info = {
-'value': pos2.getAttribute('data-value') ,
-}
-const pos6_info = {
-'value': pos2.getAttribute('data-value') ,
-}
-const pos7_info = {
-'value': pos2.getAttribute('data-value') ,
-}
-const pos8_info = {
-'value': pos2.getAttribute('data-value') ,
-}
-const pos9_info = {
-'value': pos2.getAttribute('data-value') ,
-};
-
-//  //todos os wins com parametros de valor da jogada😀
-
-function colorWin(p1,p2,p3){
-  p1.style.color = "#d00";
-  p2.style.color = "#d00";
-  p3.style.color = "#d00";
-  setTimeout(()=>{
-      p1.style.color = "#000";
-      p2.style.color = "#000";
-      p3.style.color = "#000";
-    },2000)
-
-}
-
-
-function win(value_){
-  if(pos1_info.value == value_ && pos2_info.value == value_ && pos3_info.value == value_){
-    colorWin(pos1, pos2, pos3);
-    info_win = 1;
-   tw();
- 
-   
-  }
-  else{}
-    if(pos4_info.value == value_ && pos5_info.value == value_ && pos6_info.value == value_){
-      colorWin(pos4, pos5, pos6);
-      info_win = 2;
-      tw();
-    }
-    else{}
-      if(pos7_info.value == value_ && pos8_info.value == value_ && pos9_info.value == value_){
-        colorWin(pos7, pos8, pos9);
-        info_win = 3;
-         tw();
-      }else{}
-      
-      if(pos1_info.value == value_ && pos4_info.value == value_ && pos7_info.value == value_){
-        colorWin(pos1, pos4, pos7);
-        info_win = 4;         
-        tw();
-    }
-      else{}
-      if(pos2_info.value == value_ && pos5_info.value == value_ && pos8_info.value == value_){
-        colorWin(pos2, pos5, pos8);
-        info_win = 5;          
-        tw();
-    } 
-    else{}
-    if(pos3_info.value == value_ && pos6_info.value == value_ && pos9_info.value == value_){
-      colorWin(pos3, pos6, pos9);
-      info_win = 6;
-      tw();
-    } 
-    else{}
-    if(pos1_info.value == value_ && pos5_info.value == value_ && pos9_info.value == value_){
-      
-      colorWin(pos1, pos5, pos9);    
-      info_win = 7;          
-      tw();
-      
-    } 
-    else{}
-
-    if(pos3_info.value == value_ && pos5_info.value == value_ && pos7_info.value == value_){
-      colorWin(pos3, pos5, pos7);
-      info_win = 8;
-      tw();
-    } 
-    else{}
-    
-    if(draw == false){
-    if(pos1_info.value !== "" && pos2_info.value !== "" && pos3_info.value !== "" && pos4_info.value !== "" && pos5_info.value !== "" && pos6_info.value !== "" && pos7_info.value !== "" && pos8_info.value !== "" && pos9_info.value !== ""){
-      setTimeout(()=>{
-        draw = true; 
-        resetPos();
-        draw = false;
-      },2000)
-      
-   
-      
-  }else{}}else{}
-
-    }
-    //if pos == value && pw = false, fazer empate no final^^^^😀
-
-    //zerador de posinfo e inners do valores X e O😀
-    //reset pos----------------------------
-    function resetPos(){
-      pos1_info.value = "";
-      pos2_info.value = "";
-      pos3_info.value = "";
-      pos4_info.value = "";
-      pos5_info.value = "";
-      pos6_info.value = "";
-      pos7_info.value = "";
-      pos8_info.value = "";
-      pos9_info.value = "";
-      pos1.innerHTML = "";
-      pos2.innerHTML = "";
-      pos3.innerHTML = "";
-      pos4.innerHTML = "";
-      pos5.innerHTML = "";      
-      pos6.innerHTML = "";
-      pos7.innerHTML = "";
-      pos8.innerHTML = "";
-      pos9.innerHTML = "";
-      pos1.setAttribute('data-value', '');
-      pos2.setAttribute('data-value', '');
-      pos3.setAttribute('data-value', '');
-      pos4.setAttribute('data-value', '');
-      pos5.setAttribute('data-value', '');
-      pos6.setAttribute('data-value', '');
-      pos7.setAttribute('data-value', '');
-      pos8.setAttribute('data-value', '');
-      pos9.setAttribute('data-value', '');  
-      let Data = new Date;
-      let hour_ = Data.getHours();
-      let minute_ = Data.getMinutes();
-      let second_ = Data.getSeconds();
-      function subW(who){
-  wlist.innerHTML += "<div class='wl'> "+ who +" ganhou às: "+formatHour(hour_) + ":" + formatHour(minute_)+":"+ formatHour(second_) +"</div>";
-}
-     
-
-      
-  //var
-      var dControl = null;
-
-
-        
-      if(roundX == false && draw == false){
-        
-        subW('X');
-        dControl = null;
-        
-    }
-    else{
-      if(roundX == true && draw == false){
-        
-        subW('O');
-        dControl = null;
-      }else{
-        
-      }
-    }
-    if(draw == true){
-      dControl = null;
-    }else{}
-
-    if(dControl == false){
-        if(dControl == false){
-          subW('Ninguem');}else{}
-        }else{}
-    
-
-  }
-
+                                    flex-flow: inline;
   
 
+                                }
 
-//fazer sistema de comparar o ponto dado,  e pegar de q valore pontos😀
-//retornar na tabela o número de pontos.😀
-
-var info_win = 0;
-var value_player1 = 0;
-var value_player2 =  0;
-
-const playerPointX = document.getElementById('pointX');
-const playerPointO = document.getElementById('pointO');
-//--------------------------marca pontos
-function point_add1(){
-  if(pos1_info.value == 'x'){
-      value_player1 = value_player1 + 1;
-    }else{
-      if(pos1_info.value == 'o'){
-        value_player2 = value_player2 + 1;
-}else{}}}
-
-function point_add2(){
-  if(pos2_info.value == 'x'){
-      value_player1 = value_player1 + 1;
-    }else{
-      if(pos2_info.value == 'o'){
-        value_player2 = value_player2 + 1;
-}else{}}}
-
-function point_add3(){
-  if(pos3_info.value == 'x'){
-      value_player1 = value_player1 + 1;
-    }else{
-      if(pos3_info.value == 'o'){
-        value_player2 = value_player2 + 1;
-}else{}}}
-
-function point_add4(){
-  if(pos4_info.value == 'x'){
-      value_player1 = value_player1 + 1;
-    }else{
-      if(pos4_info.value == 'o'){
-        value_player2 = value_player2 + 1;
-}else{}}}
-
-function point_add7(){
-  if(pos7_info.value == 'x'){
-      value_player1 = value_player1 + 1;
-    }else{
-      if(pos7_info.value == 'o'){
-        value_player2 = value_player2 + 1;
-}else{}}}
-
-
-
-
-
-function tw(){
-
-  if(info_win == 1 || info_win == 4 || info_win == 7){
-    document.addEventListener('load',point_add1());
-
-
-      }
-  else{
-    if(info_win == 5){
-      document.addEventListener('load',point_add2());
-}else{
-  if(info_win == 6 || info_win == 8){
-    document.addEventListener('load',point_add3());
-  }else{
-    if(info_win == 2){
-    document.addEventListener('load',point_add4());
-  }else{
-
-    if(info_win == 3){
-      document.addEventListener('load',point_add7());
-    }else{}
-  }
-  }
-
-
-  
-
+                                .numberrs{
     
+                                    display:inline-flex;
+    
+                                    margin-top:0px;
+    
+                                    font-size:40px;
+  
+  
+                                }
 
-  }
-}
+                                #showVez{
+                                    display: flex;
+                                    border:1px solid black;
+                                    transform: translate(0,-100px);
+                                    justify-content: center;
+                                    padding-top: 20%;
+                                    
+                                }
+                                #showRound{
+                                    font-size: 5.5em;
+                                    margin-left: 5px;
+                                    margin-top: -0.23em;
+                                    color:red;
+                                    
+                                }
+                                #winlist{
+                                    overflow-x: hidden;
+                                    overflow-y: scroll;
+                                    margin: -200px 0 105px 0;
+                                    height: 50px;
+                                    border:#000 1px solid;
+                                    position:fixed;
+                                    width:max-content;
+                                    width: 70%;
+                                    color:#d00;
 
-  playerPointX.innerHTML = value_player1;
-  playerPointO.innerHTML = value_player2; 
-  //----------------------------
-  info_win = 0;
- 
-  setTimeout(function(){
-    resetPos();
+                                    
 
-  }, 2000)
-}
-
-const sr = document.querySelector('#showRound');
-sr.innerHTML = "x";
-
-
-
-////mostrar a vez de quem for jogar😀
-//fazer sistema de empate😀
-var draw = false;
-
-
-function formatHour(value) {
-  return String(value).padStart(2, '0');
-}
-
-
-
-const wlist = document.querySelector('#winlist');
-
-
-
-
-
-
-//fazer sistema de mostrar quem ganhou em periodos de tempo usando datas e uma lista a parte com scroll😀
-//roundx true (O) e false (X), draw = true , fazer tudo isso no reset function😀
-
-//resolver bug que quando todos os lugares estão marcados e algum ganha marcam juntos o ponto
-
-
-</script>
-<script src="script.js">
-</script>
-</html>
+                                }
+                                .wl{
+                                    background-color: rgba(0,0,50,0.3);
+                                    margin-bottom:2px;
+                                    margin-top: 2px;
+                                    color:black;
+                                }
+                                #p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9{
+                                    
+                                    margin: 0px 0 0 0px;
+                                }

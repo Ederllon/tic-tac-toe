@@ -265,19 +265,24 @@ function win(value_){
       pos6.setAttribute('data-value', '');
       pos7.setAttribute('data-value', '');
       pos8.setAttribute('data-value', '');
-      pos9.setAttribute('data-value', '');    
+      pos9.setAttribute('data-value', '');  
+      let date_ = Data.getHours();
+
       if(roundX == false && draw == false){
-      console.log('false: X');}
+      console.log(formatTimeUnit( date_));}
     else{
       if(roundX == true && draw == false){
-        console.log('true: O');
+        console.log(date_);
       }else{
         if(draw == true){
-          console.log('draw');
+          console.log(date_);
         }else{}
       }
     }
   }
+  function formatTimeUnit(value) {
+  return String(value).padStart(2, '0');
+}
   
 
 
@@ -386,13 +391,15 @@ sr.innerHTML = "x";
 ////mostrar a vez de quem for jogar😀
 //fazer sistema de empate😀
 var draw = false;
+const Data = new Date;
+
 
 
 
 
 
 //fazer sistema de mostrar quem ganhou em periodos de tempo usando datas e uma lista a parte com scroll
-//roundx true (O) e false (X), draw = true , fazer tudo isso no reset function 
+//roundx true (O) e false (X), draw = true , fazer tudo isso no reset function
 </script>
 <script src="script.js">
 </script>

@@ -266,23 +266,26 @@ function win(value_){
       pos7.setAttribute('data-value', '');
       pos8.setAttribute('data-value', '');
       pos9.setAttribute('data-value', '');  
-      let date_ = Data.getHours();
+      let Data = new Date;
+      let hour_ = Data.getHours();
+      let minute_ = Data.getMinutes();
+      let second_ = Data.getSeconds();
+
+     
 
       if(roundX == false && draw == false){
-      console.log(formatTimeUnit( date_));}
+      console.log(formatHour( hour_));}
     else{
       if(roundX == true && draw == false){
-        console.log(date_);
+        console.log('');
       }else{
         if(draw == true){
-          console.log(date_);
+          console.log('');
         }else{}
       }
     }
   }
-  function formatTimeUnit(value) {
-  return String(value).padStart(2, '0');
-}
+
   
 
 
@@ -391,7 +394,13 @@ sr.innerHTML = "x";
 ////mostrar a vez de quem for jogar😀
 //fazer sistema de empate😀
 var draw = false;
-const Data = new Date;
+
+
+function formatHour(value) {
+  return String(value).padStart(2, '0');
+}
+
+
 
 
 

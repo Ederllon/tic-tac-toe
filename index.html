@@ -285,7 +285,7 @@ function win(value_){
       let second_ = Data.getSeconds();
       function subW(who){
   wlist.innerHTML += "<div class='wl'> "+ who +" ganhou às: "+formatHour(hour_) + ":" + formatHour(minute_)+":"+ formatHour(second_) +"</div>";
-
+  wlist.scrollTo(0, document.documentElement.scrollHeight);
 }
      
 

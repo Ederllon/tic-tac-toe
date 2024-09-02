@@ -179,14 +179,12 @@ function win(value_){
  
    
   }
-  else{}
-    if(pos4_info.value == value_ && pos5_info.value == value_ && pos6_info.value == value_){
+  else{    if(pos4_info.value == value_ && pos5_info.value == value_ && pos6_info.value == value_){
       colorWin(pos4, pos5, pos6);
       info_win = 2;
       tw();
     }
-    else{}
-      if(pos7_info.value == value_ && pos8_info.value == value_ && pos9_info.value == value_){
+    else{ if(pos7_info.value == value_ && pos8_info.value == value_ && pos9_info.value == value_){
         colorWin(pos7, pos8, pos9);
         info_win = 3;
          tw();
@@ -203,40 +201,50 @@ function win(value_){
         info_win = 5;          
         tw();
     } 
-    else{}
-    if(pos3_info.value == value_ && pos6_info.value == value_ && pos9_info.value == value_){
+    else{
+      if(pos3_info.value == value_ && pos6_info.value == value_ && pos9_info.value == value_){
       colorWin(pos3, pos6, pos9);
       info_win = 6;
       tw();
     } 
-    else{}
-    if(pos1_info.value == value_ && pos5_info.value == value_ && pos9_info.value == value_){
+    else{
+      if(pos1_info.value == value_ && pos5_info.value == value_ && pos9_info.value == value_){
       
       colorWin(pos1, pos5, pos9);    
       info_win = 7;          
       tw();
       
     } 
-    else{}
-
-    if(pos3_info.value == value_ && pos5_info.value == value_ && pos7_info.value == value_){
+    else{
+      if(pos3_info.value == value_ && pos5_info.value == value_ && pos7_info.value == value_){
       colorWin(pos3, pos5, pos7);
       info_win = 8;
       tw();
     } 
-    else{}
-    
-    if(draw == false){
-    if(pos1_info.value !== "" && pos2_info.value !== "" && pos3_info.value !== "" && pos4_info.value !== "" && pos5_info.value !== "" && pos6_info.value !== "" && pos7_info.value !== "" && pos8_info.value !== "" && pos9_info.value !== ""){
+    else{
+      if(draw == false){
+    if(info_win == 0 && pos1_info.value !== "" && pos2_info.value !== "" && pos3_info.value !== "" && pos4_info.value !== "" && pos5_info.value !== "" && pos6_info.value !== "" && pos7_info.value !== "" && pos8_info.value !== "" && pos9_info.value !== ""){
       setTimeout(()=>{
         draw = true; 
         resetPos();
         draw = false;
       },2000)
-      
-   
-      
   }else{}}else{}
+    }
+    }
+    }
+    }
+  }
+}
+
+     
+
+
+
+
+    
+    
+
 
     }
     //if pos == value && pw = false, fazer empate no final^^^^😀
@@ -282,33 +290,30 @@ function win(value_){
 
       
   //var
-      var dControl = null;
+      var dControl = true;
 
 
-        
+      if(draw == true && info_win == 0){
+          subW('Ninguem');
+        }else{
       if(roundX == false && draw == false){
         
         subW('X');
-        dControl = null;
+        dControl = true;
         
     }
     else{
       if(roundX == true && draw == false){
         
         subW('O');
-        dControl = null;
+        dControl = true;
       }else{
         
       }
     }
-    if(draw == true){
-      dControl = null;
-    }else{}
+  }
 
-    if(dControl == false){
-        if(dControl == false){
-          subW('Ninguem');}else{}
-        }else{}
+ 
     
 
   }

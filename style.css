@@ -139,6 +139,8 @@ transform: translate(50px,-190px);
                                     margin-top: -0.23em;
                                     color:red;
                                     
+                                    
+                                    
                                 }
                                 #winlist{
                                     overflow-x: hidden;
@@ -160,7 +162,108 @@ transform: translate(50px,-190px);
                                     margin-top: 2px;
                                     color:black;
                                 }
+
                                 #p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9{
                                     
                                     margin: 0px 0 0 0px;
                                 }
+
+
+@keyframes srA{
+    0%{
+        
+        color: #f00;
+    }
+    
+    10%{
+        color: black;
+    }
+    20%{
+        
+        color: #f00;
+    }
+    
+    30%{
+        color: black;
+    }
+    40%{
+        
+        color: #f00;
+    }
+    
+    50%{
+        color: black;
+    }
+    60%{
+        
+        color: #f00;
+    }
+    
+    70%{
+        color: black;
+    }
+    
+    80%{
+        
+        color: #f00;
+    }
+    
+    90%{
+        color: black;
+    }
+    100%{
+        
+        color: #f00;}
+    
+    
+}
+
+@keyframes blA{
+       0%{
+        
+        color: #f00;
+    }
+    
+    10%{
+        color: black;
+    }
+    20%{
+        
+        color: #f00;
+    }
+    
+    30%{
+        color: black;
+    }
+    40%{
+        
+        color: #f00;
+    }
+    
+    50%{
+        color: black;
+    }
+    60%{
+        
+        color: #f00;
+    }
+    
+    70%{
+        color: black;
+    }
+    
+    80%{
+        
+        color: #f00;
+    }
+    
+    90%{
+        color: black;
+    }
+    100%{
+        
+        color: #f00;
+    
+    
+                                    }
+    

@@ -106,7 +106,10 @@ function func_hit(when,posClick){
       };
 
 
-    }else{}
+    }else{
+        
+        sr.style.animation = "srA 1.5s linear infinite";
+    }
 
   //adicionar innerhtml com o valor especifico na chamada, ex: funcao()😀
   when.innerHTML = posClick.value;
@@ -118,14 +121,14 @@ function func_hit(when,posClick){
   if(roundX == true){
       //adicionar style da animscao
           
-      sr.style.animation = "srA 1.5s linear infinite";
+    
       
       sr.innerHTML = "x";
       
       setTimeout(()=>{   sr.style.animation = ""; } , 1000)
 
 }else{
-  sr.style.animation = "srA 1.5s linear infinite";
+  
       
       sr.innerHTML = "o";
       

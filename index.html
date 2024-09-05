@@ -110,15 +110,30 @@ function func_hit(when,posClick){
 
   //adicionar innerhtml com o valor especifico na chamada, ex: funcao()😀
   when.innerHTML = posClick.value;
-  //----------------------------------------------------- ajustar fonte
+  //----------------------------------------------------- ajustar fonte e texto do round
   when.style.fontSize = "50px";
   when.style.margin = "18px -1.7px";
 
 
   if(roundX == true){
-  sr.innerHTML = "x";
+      //adicionar style da animscao
+          
+      sr.style.animation = "srA 1.5s linear infinite";
+      
+      sr.innerHTML = "x";
+      
+      setTimeout(()=>{   sr.style.animation = ""; } , 1000)
+
 }else{
-  sr.innerHTML = "o";
+  sr.style.animation = "srA 1.5s linear infinite";
+      
+      sr.innerHTML = "o";
+      
+      setTimeout(()=>{   sr.style.animation = ""; } , 1000)
+
+    
+    
+    
 }
 
 
@@ -284,14 +299,13 @@ function win(value_){
       let minute_ = Data.getMinutes();
       let second_ = Data.getSeconds();
       function subW(who){
+          wlist.style
   wlist.innerHTML += "<div class='wl'> "+ who +" ganhou às: "+formatHour(hour_) + ":" + formatHour(minute_)+":"+ formatHour(second_) +"</div>";
   wlist.scrollTo(0, document.documentElement.scrollHeight);
-}
+};
+    
+  
      
-
-      
-  //var
-      var dControl = true;
 
 
       if(draw == true && info_win == 0){
@@ -300,14 +314,14 @@ function win(value_){
       if(roundX == false && draw == false){
         
         subW('X');
-        dControl = true;
+       
         
     }
     else{
       if(roundX == true && draw == false){
         
         subW('O');
-        dControl = true;
+       
       }else{
         
       }
@@ -441,13 +455,12 @@ const wlist = document.querySelector('#winlist');
 
 
 
-
-
 //fazer sistema de mostrar quem ganhou em periodos de tempo usando datas e uma lista a parte com scroll😀
 //roundx true (O) e false (X), draw = true , fazer tudo isso no reset function😀
 
 //resolver bug que quando todos os lugares estão marcados e algum ganha marcam juntos o ponto😀
 
+//jogar animação em backgroud de historico
 
 </script>
 <script src="script.js">

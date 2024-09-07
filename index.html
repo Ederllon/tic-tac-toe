@@ -270,6 +270,8 @@ function win(value_){
 
     //zerador de posinfo e inners do valores X e O😀
     //reset pos----------------------------
+ 
+
     function resetPos(){
       pos1_info.value = "";
       pos2_info.value = "";
@@ -303,9 +305,21 @@ function win(value_){
       let minute_ = Data.getMinutes();
       let second_ = Data.getSeconds();
       function subW(who){
-          wlist.style
-  wlist.innerHTML += "<div class='wl'> "+ who +" ganhou às: "+formatHour(hour_) + ":" + formatHour(minute_)+":"+ formatHour(second_) +"</div>";
+
+        listCont = listCont + 1;
+        var trans_nameList = String('listN'+listCont);      
+  wlist.innerHTML += "<div id = '" + trans_nameList +"' class='wl'> "+ who +" ganhou às: "+formatHour(hour_) + ":" + formatHour(minute_)+":"+ formatHour(second_) +"</div>";
   wlist.scrollTo(0, document.documentElement.scrollHeight);
+  let translatelist = String('listN' + listCont);
+  let listN = document.getElementById(''+translatelist+'');
+  listN.style.animation = "blA 2s ease-in-out infinite";
+
+  
+
+
+
+
+
 };
     
   
@@ -465,6 +479,15 @@ const wlist = document.querySelector('#winlist');
 //resolver bug que quando todos os lugares estão marcados e algum ganha marcam juntos o ponto😀
 
 //jogar animação em backgroud de historico
+
+var listCont = 0;
+// listCont = listCont + 1; 
+
+//   var trans_nameList = String('listN'+listCont);
+//   wlist.innerHTML += "<div id = '" + trans_nameList +"' class='wl'> ganhou às::</div>";
+//   let translatelist = String('listN' + listCont);
+//   let listN = document.getElementById(''+translatelist+'');
+//   listN.style.color = "#f0a";
 
 </script>
 <script src="script.js">

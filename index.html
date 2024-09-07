@@ -312,7 +312,10 @@ function win(value_){
   wlist.scrollTo(0, document.documentElement.scrollHeight);
   let translatelist = String('listN' + listCont);
   let listN = document.getElementById(''+translatelist+'');
-  listN.style.animation = "blA 2s ease-in-out infinite";
+  listN.style.animation = "blA 2s ease-in-out";
+  setTimeout(()=>{
+    listN.style.animation = "";
+  },2000);
 
   
 

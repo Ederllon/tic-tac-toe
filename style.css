@@ -173,47 +173,47 @@ transform: translate(50px,-190px);
 
 @keyframes blA {
     0%{
-        background-color: rgba(0,250,250,0.3);
+        background-color: rgba(0,0,50,0.3);
     }
     
     10%{
-        background-color: rgba(0,0,50,0.3);
+        background-color: rgba(50,50, 200, 0.3);
     }
     20%{
-        background-color: rgba(0,250,250,0.3);
+        background-color: rgba(0,0,50,0.3);
     }
     
     30%{
-        background-color: rgba(0,0,50,0.3);
+        background-color: rgba(50,50, 200,0.3);
     }
     40%{
         
-        background-color: rgba(0,250,250,0.3);
+        background-color: rgba(0,0,50,0.3);
     }
     
     50%{
-        background-color: rgba(0,0,50,0.3);
+        background-color: rgba(50,50, 200,0.3);
     }
     60%{
         
-        background-color: rgba(0,250,250,0.3)
+        background-color: rgba(0,0,50,0.3);
     }
     
     70%{
-        background-color: rgba(0,0,50,0.3);
+        background-color: rgba(50,50, 200,0.3);
     }
     
     80%{
         
-        background-color: rgba(0,250,250,0.3)
+        background-color: rgba(0,0,50,0.3);
     }
     
     90%{
-        background-color: rgba(0,0,50,0.3);
+        background-color: rgba(50,50, 200,0.3);
     }
     100%{
-        
-        background-color: rgba(0,250,250,0.3)
+        background-color: rgba(0,0,50,0.3);
+       
     
     
 }

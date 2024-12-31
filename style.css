@@ -52,39 +52,48 @@ position:absolute;
 
 #p1{
 
-transform: translate(50px,-190px);
+transform: translate(160%,-630%);
+background:rgba(50,50, 200, 0.5);
 }
 #p2{
     
-    transform: translate(80px,-190px);
+    transform: translate(256%,-630%);
+    background:rgba(50,50, 200, 0.5);
     }
     #p3{
        
-        transform: translate(110px,-190px);
+        transform: translate(352%,-630%);
+        background:rgba(50,50, 200, 0.5);
         }
         #p4{
 
-            transform: translate(50px,-155px);
+            transform: translate(160%,-514%);
+            background:rgba(50,50, 200, 0.5);
             }
             #p5{
     
-                transform: translate(80px,-155px);
+                transform: translate(256%,-514%);
+                background:rgba(50,50, 200, 0.5);
                 }
                 #p6{
 
-                    transform: translate(110px,-155px);
+                    transform: translate(352%,-514%);
+                    background:rgba(50,50, 200, 0.5);
                     }
                     #p7{
     
-                        transform: translate(50px,-120px);
+                        transform: translate(160%,-398%);
+                        background:rgba(50,50, 200, 0.5);
                         }
                         #p8{
         
-                            transform: translate(80px,-120px);
+                            transform: translate(256%,-398%);
+                            background:rgba(50,50, 200, 0.5);
                             }
                             #p9{
             
-                                transform: translate(110px,-120px);
+                                transform: translate(352%,-398%);
+                                background:rgba(50,50, 200, 0.5);
                                 }
                                 .default_clicker{
                                     font-family: "Roboto", sans-serif;
